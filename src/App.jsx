@@ -1,23 +1,23 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import AboutSection from './components/sections/AboutSection';
-import ResponsiveShowcase from './components/sections/ResponsiveShowcase';
-import ServicesValues from './components/sections/ServicesValues';
-import WorkShowcase from './components/sections/WorkShowcase';
-import TeamSection from './components/sections/TeamSection';
-import ContactSection from './components/sections/ContactSection';
+import HeroFilm from './components/sections/HeroFilm';
+import FormationScene from './components/sections/FormationScene';
+import ExhibitionGallery from './components/sections/ExhibitionGallery';
+import KeynoteDevices from './components/sections/KeynoteDevices';
+import StatementWall from './components/sections/StatementWall';
+import FoundersEditorial from './components/sections/FoundersEditorial';
+import InvitationSection from './components/sections/InvitationSection';
 import Footer from './components/layout/Footer';
 
 export default function App() {
-  // Initialize Lenis Smooth Scrolling for continuous momentum and flow
+  // Initialize Lenis Smooth Scrolling with heavy luxury inertia
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      duration: 1.4,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      touchMultiplier: 1.5,
+      touchMultiplier: 1.2,
     });
 
     function raf(time) {
@@ -34,29 +34,29 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white selection:bg-[#FACC15] selection:text-black">
+    <div className="min-h-screen bg-[#020203] text-white selection:bg-[#FACC15] selection:text-black">
       <Navbar />
-      <main>
-        {/* Chapter 1: The Current (Pure Potential) */}
-        <Hero />
+      <main className="relative">
+        {/* Chapter 01: The Current (Pure Potential) */}
+        <HeroFilm />
 
-        {/* Chapter 2: Formation (Ideas Take Shape) */}
-        <AboutSection />
+        {/* Chapter 02: Formation (Floating Statements / Discovered Architecture) */}
+        <FormationScene />
 
-        {/* Chapter 3: Creation (Concept to Reality) */}
-        <ResponsiveShowcase />
+        {/* Chapter 03: The Exhibition (Horizontal Cinematic Museum of Work) */}
+        <ExhibitionGallery />
 
-        {/* Chapter 4: Momentum (Forces of Growth) */}
-        <ServicesValues />
+        {/* Chapter 04: The Monolith (Keynote Multi-Device Floating Convergence) */}
+        <KeynoteDevices />
 
-        {/* Chapter 5: Impact (Relevant. Iconic. Unstoppable.) */}
-        <WorkShowcase />
+        {/* Chapter 05: The Statement Wall (One Monumental Word Per Viewport) */}
+        <StatementWall />
 
-        {/* Chapter 6: The People Behind The Flow (The Creators) */}
-        <TeamSection />
+        {/* Chapter 06: The Creators (High-Fashion Editorial Magazine Spread) */}
+        <FoundersEditorial />
 
-        {/* Chapter 7: Start Your Flow (Full Circle Invitation) */}
-        <ContactSection />
+        {/* Chapter 07: The Invitation (Massive Question Dominating the Screen) */}
+        <InvitationSection />
       </main>
       <Footer />
     </div>
