@@ -5,7 +5,7 @@ import { ArrowUpRight, ArrowDown } from 'lucide-react';
 export default function Hero() {
   return (
     <section
-      id="home"
+      id="current"
       className="relative min-h-screen flex items-center justify-start overflow-hidden bg-[#050505] text-white"
     >
       {/* Central Visual Identity: Luminous, Bright Water Flow Video */}
@@ -29,6 +29,22 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-8 sm:px-12 md:px-20 lg:px-24 xl:px-28 py-24 md:py-32">
         <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start text-left">
           
+          {/* Chapter 01 Identifier */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/40 border border-[#FACC15]/30 backdrop-blur-md mb-6"
+          >
+            <span className="text-[11px] font-mono font-bold tracking-widest uppercase text-[#FACC15]">
+              Chapter 01
+            </span>
+            <span className="w-1 h-1 rounded-full bg-zinc-400" />
+            <span className="text-[11px] font-mono tracking-wider uppercase text-zinc-300">
+              The Current · Pure Potential
+            </span>
+          </motion.div>
+
           {/* Monumental Headline: Strict Left Flush Alignment */}
           <div className="w-full flex flex-col items-start font-black font-display tracking-tightest leading-[0.93] text-[#FACC15] select-none [text-shadow:0_4px_30px_rgba(0,0,0,0.55)]">
             
@@ -102,10 +118,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="#services"
+              href="#formation"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-black/45 hover:bg-black/65 text-[#FACC15] border border-[#FACC15]/40 hover:border-[#FACC15] font-bold text-sm tracking-tight backdrop-blur-md transition-all duration-300 group shadow-lg"
             >
-              <span>Explore Capabilities</span>
+              <span>Explore The Flow</span>
               <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
             </a>
           </motion.div>

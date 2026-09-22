@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Gauge, Layers, ShieldCheck, Sparkles } from 'lucide-react';
+import { Gauge, Layers, ShieldCheck } from 'lucide-react';
 
 export default function ResponsiveShowcase() {
   return (
     <section
-      id="responsive"
+      id="creation"
       className="relative py-36 md:py-48 bg-[#050608] text-white overflow-hidden"
     >
       {/* Ambient Lighting & Glow */}
@@ -14,18 +14,21 @@ export default function ResponsiveShowcase() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Section Header */}
+        {/* Section Header: Chapter 03 · Creation */}
         <div className="text-center max-w-3xl mx-auto mb-24">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
           >
-            <Sparkles className="w-4 h-4 text-[#FACC15]" />
-            <span className="text-xs md:text-sm font-semibold tracking-widest uppercase text-zinc-300">
-              Multi-Device Architecture
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#FACC15]">
+              Chapter 03
+            </span>
+            <span className="w-1 h-1 rounded-full bg-zinc-600" />
+            <span className="text-xs font-semibold tracking-widest uppercase text-zinc-300">
+              Creation · From Concept to Reality
             </span>
           </motion.div>
 
@@ -47,7 +50,7 @@ export default function ResponsiveShowcase() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto leading-relaxed"
           >
-            Every viewport is sculpted with fluid mathematical precision. Zero compromises across desktop displays, tablets, and handheld devices.
+            This is where concepts solidify into living, high-conversion products. Scaled, stress-tested, and sculpted across desktop monitors, tablets, and handheld devices.
           </motion.p>
         </div>
 
@@ -63,7 +66,6 @@ export default function ResponsiveShowcase() {
           >
             {/* Screen Bezel */}
             <div className="bg-[#1C1D21] rounded-t-[28px] p-3 md:p-4 border-t border-x border-zinc-700/80 shadow-2xl">
-              {/* Webcam & Sensor Notch */}
               <div className="flex items-center justify-center mb-2">
                 <div className="w-3 h-3 rounded-full bg-black border border-zinc-700 flex items-center justify-center">
                   <div className="w-1 h-1 rounded-full bg-teal-500/80" />
@@ -122,7 +124,6 @@ export default function ResponsiveShowcase() {
             className="hidden md:block absolute -right-8 lg:-right-16 -bottom-6 z-20 w-56 lg:w-64 shadow-[0_25px_60px_rgba(0,0,0,0.9)]"
           >
             <div className="bg-[#121316] rounded-[42px] p-3 border-2 border-zinc-700/80">
-              {/* Dynamic Island */}
               <div className="w-16 h-3.5 bg-black rounded-full mx-auto mb-2 border border-zinc-800" />
               <div className="bg-[#0A0A0A] rounded-[32px] overflow-hidden aspect-[9/19] border border-white/5 relative">
                 <img

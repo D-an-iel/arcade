@@ -20,12 +20,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Overview', href: '#home' },
-    { label: 'Capabilities', href: '#services' },
-    { label: 'Work', href: '#portfolio' },
-    { label: 'Systems', href: '#responsive' },
-    { label: 'Studio', href: '#team' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'The Current', href: '#current' },
+    { label: 'Formation', href: '#formation' },
+    { label: 'Creation', href: '#creation' },
+    { label: 'Momentum', href: '#momentum' },
+    { label: 'Impact', href: '#impact' },
+    { label: 'Creators', href: '#creators' },
   ];
 
   return (
@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Brand Mark */}
           <a
-            href="#home"
+            href="#current"
             className="group flex items-center gap-1.5 focus:outline-none"
           >
             <span className="text-2xl md:text-3xl font-black font-display tracking-tightest text-white transition-colors duration-300 group-hover:text-[#FACC15]">
@@ -48,7 +48,7 @@ export default function Navbar() {
             </span>
           </a>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links - Narrative Chapters */}
           <nav className="hidden md:flex items-center gap-1 p-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
@@ -67,7 +67,7 @@ export default function Navbar() {
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FACC15] hover:bg-yellow-300 text-black font-bold text-xs tracking-tight shadow-[0_0_25px_rgba(250,204,21,0.25)] transition-all duration-300 hover:scale-105 active:scale-95"
             >
-              <span>Get in Touch</span>
+              <span>Start Flow</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full py-4 rounded-2xl bg-[#FACC15] text-black font-extrabold text-center block text-base shadow-glow-yellow"
             >
-              Start a Project
+              Start Your Flow
             </a>
           </div>
         </div>

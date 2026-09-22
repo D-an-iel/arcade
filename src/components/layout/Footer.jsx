@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Top Wordmark & Quick Link Row */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-10 pb-16 border-b border-white/10">
           <div>
-            <a href="#home" className="inline-flex items-center gap-1.5 group">
+            <a href="#current" className="inline-flex items-center gap-1.5 group">
               <span className="text-4xl md:text-5xl font-black font-display tracking-tight text-white group-hover:text-[#FACC15] transition-colors">
                 arcade
               </span>
@@ -24,14 +24,15 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation Links - Narrative Chapters */}
           <div className="flex flex-wrap gap-8 text-sm font-semibold text-zinc-300">
-            <a href="#home" className="hover:text-[#FACC15] transition-colors">Overview</a>
-            <a href="#services" className="hover:text-[#FACC15] transition-colors">Capabilities</a>
-            <a href="#portfolio" className="hover:text-[#FACC15] transition-colors">Work</a>
-            <a href="#responsive" className="hover:text-[#FACC15] transition-colors">Systems</a>
-            <a href="#team" className="hover:text-[#FACC15] transition-colors">Studio</a>
-            <a href="#contact" className="hover:text-[#FACC15] transition-colors">Contact</a>
+            <a href="#current" className="hover:text-[#FACC15] transition-colors">The Current</a>
+            <a href="#formation" className="hover:text-[#FACC15] transition-colors">Formation</a>
+            <a href="#creation" className="hover:text-[#FACC15] transition-colors">Creation</a>
+            <a href="#momentum" className="hover:text-[#FACC15] transition-colors">Momentum</a>
+            <a href="#impact" className="hover:text-[#FACC15] transition-colors">Impact</a>
+            <a href="#creators" className="hover:text-[#FACC15] transition-colors">Creators</a>
+            <a href="#contact" className="hover:text-[#FACC15] transition-colors">Start Flow</a>
           </div>
 
           {/* Social Links */}
@@ -82,8 +83,8 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            <a href="#home" className="hover:text-zinc-300 transition-colors">Privacy Policy</a>
-            <a href="#home" className="hover:text-zinc-300 transition-colors">Terms of Service</a>
+            <a href="#current" className="hover:text-zinc-300 transition-colors">Privacy Policy</a>
+            <a href="#current" className="hover:text-zinc-300 transition-colors">Terms of Service</a>
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-[#FACC15] transition-colors"

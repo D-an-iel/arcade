@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Sparkles, Eye } from 'lucide-react';
+import { ArrowUpRight, Eye } from 'lucide-react';
 import { projectsData, categories } from '../../data/projectsData';
 import ProjectModal from '../common/ProjectModal';
 
@@ -14,50 +14,52 @@ export default function WorkShowcase() {
 
   return (
     <section
-      id="portfolio"
-      className="relative py-36 md:py-48 bg-[#07090A] text-white overflow-hidden"
+      id="impact"
+      className="relative py-44 md:py-60 bg-[#07090A] text-white overflow-hidden"
     >
       {/* Authentic Vertical Teal Light Pillars Backdrop (Figma Reference) */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Subtle Fluted Vertical Columns Effect */}
-        <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,rgba(13,59,62,0.15)_1px,transparent_1px)] bg-[size:80px_100%]" />
+        <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,rgba(13,59,62,0.18)_1px,transparent_1px)] bg-[size:80px_100%]" />
         
         {/* Ambient Teal Luminescence Beams */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#0D3B3E]/40 via-teal-900/15 to-transparent rounded-full blur-[160px]" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-[#0D3B3E]/45 via-teal-900/20 to-transparent rounded-full blur-[160px]" />
         <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-cyan-950/20 rounded-full blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Major Narrative Moment: The User Pauses Here */}
-        <div className="text-center max-w-4xl mx-auto mb-28 md:mb-36">
+        
+        {/* Major Narrative Moment: The User Pauses Here (The Climax) */}
+        <div className="text-center max-w-4xl mx-auto mb-32 md:mb-44">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex flex-col items-center gap-2 mb-8"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
           >
-            <span className="text-xs md:text-sm font-bold tracking-[0.25em] uppercase text-[#FACC15]">
-              Designed For Today, Built For What Comes Next
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#FACC15]">
+              Chapter 05
             </span>
-            <span className="text-xs font-mono uppercase tracking-widest text-zinc-500">
-              Future proof your brand strategy
+            <span className="w-1 h-1 rounded-full bg-zinc-600" />
+            <span className="text-xs font-medium tracking-wider uppercase text-zinc-300">
+              Impact · The Narrative Climax
             </span>
           </motion.div>
 
           {/* Monumental Commanding 3-Line Headline */}
           <motion.h2
-            initial={{ opacity: 0, y: 35 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-tightest leading-[0.92] text-white"
           >
             Relevant.
             <br />
             Iconic.
             <br />
-            <span className="text-[#FACC15] drop-shadow-[0_0_40px_rgba(250,204,21,0.25)]">
+            <span className="text-[#FACC15] drop-shadow-[0_0_40px_rgba(250,204,21,0.3)]">
               Unstoppable.
             </span>
           </motion.h2>
@@ -67,9 +69,9 @@ export default function WorkShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg md:text-xl text-zinc-400 font-light max-w-2xl mx-auto mt-10 leading-relaxed"
+            className="text-lg md:text-xl lg:text-2xl text-zinc-300/90 font-light max-w-2xl mx-auto mt-12 leading-relaxed"
           >
-            A curated index of production applications, high-conversion design systems, and digital flagships engineered to set industry standards.
+            Where potential, formation, creation, and momentum culminate in enduring market dominance.
           </motion.p>
         </div>
 
@@ -180,10 +182,10 @@ export default function WorkShowcase() {
               </h3>
             </div>
             <a
-              href="#contact"
+              href="#creators"
               className="px-9 py-4 rounded-full bg-white text-black hover:bg-[#FACC15] font-extrabold text-sm tracking-tight transition-colors duration-300 whitespace-nowrap shadow-2xl"
             >
-              Start Your Build
+              Meet The Creators
             </a>
           </div>
         </motion.div>

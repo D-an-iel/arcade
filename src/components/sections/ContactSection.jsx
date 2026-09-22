@@ -43,22 +43,23 @@ export default function ContactSection() {
       id="contact"
       className="relative py-36 md:py-48 bg-[#050608] text-white overflow-hidden"
     >
-      {/* Bringing the Water Story Full Circle: Subtle Ambient Fluid Video Layer */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-25">
+      {/* Bringing the Water Story Full Circle: Connecting Emotionally With The Beginning */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-30">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover filter brightness-50 contrast-125 scale-105"
+          className="w-full h-full object-cover filter brightness-[0.7] contrast-125 scale-105"
         >
           <source src="/videos/arcade-flow.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-[#050608] via-[#050608]/85 to-[#050608]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20 items-start">
+          
           {/* Left Column: Narrative Full-Circle Climax */}
           <div className="lg:col-span-5">
             <motion.div
@@ -66,11 +67,14 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
+              className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-8"
             >
-              <Sparkles className="w-4 h-4 text-[#FACC15]" />
-              <span className="text-xs md:text-sm font-bold tracking-widest uppercase text-zinc-300">
-                Full Circle · Shaping The Flow
+              <span className="text-xs font-mono font-bold tracking-widest uppercase text-[#FACC15]">
+                Chapter 07
+              </span>
+              <span className="w-1 h-1 rounded-full bg-zinc-600" />
+              <span className="text-xs font-medium tracking-wider uppercase text-zinc-300">
+                Invitation · Start Your Flow
               </span>
             </motion.div>
 
@@ -81,7 +85,7 @@ export default function ContactSection() {
               transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="text-5xl sm:text-6xl md:text-7xl font-black font-display tracking-tightest leading-[0.95] text-white mb-8"
             >
-              Get In Touch With <span className="text-[#FACC15]">Us</span>.
+              Start Your <span className="text-[#FACC15]">Flow</span>.
             </motion.h2>
 
             <motion.p
@@ -91,7 +95,7 @@ export default function ContactSection() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="text-lg md:text-xl text-zinc-300 font-light leading-relaxed mb-12"
             >
-              From raw concept to unstoppable momentum. Tell us where you want to take your brand, and our architectural leads will help chart the current.
+              The journey comes full circle. From pure potential into unstoppable market momentum. Tell us where you want to take your brand, and let's shape the flow together.
             </motion.p>
 
             {/* Direct Studio Channels */}
@@ -281,6 +285,7 @@ export default function ContactSection() {
               )}
             </motion.div>
           </div>
+
         </div>
       </div>
     </section>

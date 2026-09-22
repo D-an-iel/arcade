@@ -1,28 +1,31 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowUpRight } from 'lucide-react';
 import { teamData } from '../../data/teamData';
 import { TwitterIcon, LinkedinIcon, GithubIcon } from '../common/Icons';
 
 export default function TeamSection() {
   return (
     <section
-      id="team"
-      className="relative py-36 md:py-44 bg-[#FACC15] text-black overflow-hidden selection:bg-black selection:text-[#FACC15]"
+      id="creators"
+      className="relative py-36 md:py-48 bg-[#FACC15] text-black overflow-hidden selection:bg-black selection:text-[#FACC15]"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        {/* Section Header - Editorial Studio Direction */}
+      <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 relative z-10">
+        
+        {/* Section Header - Chapter 06: Human Connection */}
         <div className="text-center max-w-3xl mx-auto mb-24 md:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/10 border border-black/15 mb-8"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-black/10 border border-black/15 mb-8"
           >
-            <Sparkles className="w-4 h-4 text-black" />
-            <span className="text-xs md:text-sm font-bold tracking-widest uppercase text-black">
-              The Minds Behind Arcade
+            <span className="text-xs font-mono font-bold tracking-widest uppercase text-black">
+              Chapter 06
+            </span>
+            <span className="w-1 h-1 rounded-full bg-black/40" />
+            <span className="text-xs font-bold tracking-widest uppercase text-black">
+              The People Behind The Flow
             </span>
           </motion.div>
 
@@ -33,7 +36,7 @@ export default function TeamSection() {
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-tightest leading-[0.92] text-black mb-8"
           >
-            Meet The Team
+            The Creators.
           </motion.h2>
 
           <motion.p
@@ -43,7 +46,7 @@ export default function TeamSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-xl md:text-2xl font-normal text-black/85 max-w-2xl mx-auto leading-relaxed"
           >
-            Seasoned product architects, creative directors, and systems engineers unified by a relentless obsession with craftsmanship.
+            Not account managers or corporate layers. The architects, designers, and systems engineers who sit shoulder-to-shoulder to shape your vision.
           </motion.p>
         </div>
 
@@ -93,7 +96,7 @@ export default function TeamSection() {
                 {/* Social Connect Icons */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">
-                    CONNECT
+                    DIRECT
                   </span>
                   <div className="flex items-center gap-2">
                     <a
