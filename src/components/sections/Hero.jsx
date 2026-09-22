@@ -1,98 +1,113 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 
 export default function Hero() {
-  const videoRef = useRef(null);
-
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505] text-white pt-24 pb-16"
+      className="relative min-h-screen flex items-center justify-start overflow-hidden bg-[#050505] text-white pt-28 pb-20 md:py-0"
     >
-      {/* Central Identity: Looping Water Flow Video */}
+      {/* Central Visual Identity: Water Flow Video */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
-          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-60 scale-105 filter brightness-[0.75] contrast-[1.1] transition-transform duration-1000"
+          className="w-full h-full object-cover scale-105 filter brightness-[0.85] contrast-[1.15]"
         >
           <source src="/videos/arcade-flow.mp4" type="video/mp4" />
         </video>
 
-        {/* Cinematic Vignette & Liquid Blend Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/80 via-transparent to-[#050505] pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/70 via-transparent to-[#050505]/70 pointer-events-none" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-teal-500/10 via-transparent to-black/80 pointer-events-none" />
+        {/* Subtle Vignette so text is ultra-readable while preserving water highlights */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/40 pointer-events-none" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 text-center flex flex-col items-center justify-center">
-        {/* Subtle Identity Eyebrow */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md mb-8"
-        >
-          <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
-          <span className="text-xs md:text-sm font-medium tracking-widest uppercase text-zinc-300">
-            Shaping the Flow · Digital Agency & Product Studio
-          </span>
-        </motion.div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 lg:px-24 w-full">
+        <div className="max-w-3xl">
+          {/* Monumental Headline: We build Websites (struck through) Experience */}
+          <div className="font-black font-display tracking-tightest leading-[0.92] text-[#FACC15] select-none">
+            {/* Line 1: We build */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="text-6xl sm:text-7xl md:text-8xl lg:text-[115px] xl:text-[130px]"
+            >
+              We build
+            </motion.div>
 
-        {/* Monumental Cinematic Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black font-display tracking-tightest text-white leading-[0.98] max-w-5xl mx-auto mb-8"
-        >
-          We build brands that{' '}
-          <span className="text-yellow-400 inline-block drop-shadow-[0_0_35px_rgba(250,204,21,0.25)]">
-            dominate.
-          </span>
-        </motion.h1>
+            {/* Line 2: Websites with animated red strike-through */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="relative inline-block text-6xl sm:text-7xl md:text-8xl lg:text-[115px] xl:text-[130px] my-1 md:my-2"
+            >
+              <span>Websites</span>
+              {/* Animated Red Strikethrough Bar */}
+              <motion.div
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: 1 }}
+                transition={{ duration: 0.6, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                style={{ transformOrigin: 'left center' }}
+                className="absolute left-[-2%] right-[-2%] top-[52%] -translate-y-1/2 h-[7px] sm:h-[9px] md:h-[12px] lg:h-[14px] bg-[#EF4444] rounded-full shadow-[0_0_20px_rgba(239,68,68,0.7)] pointer-events-none"
+              />
+            </motion.div>
 
-        {/* Narrative Pitch - Editorial Pacing */}
-        <motion.p
-          initial={{ opacity: 0, y: 25 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="text-lg md:text-xl lg:text-2xl text-zinc-300/90 font-light max-w-3xl mx-auto leading-relaxed mb-12 tracking-wide"
-        >
-          Founded by young professionals with industry track records, we craft high-impact digital experiences, custom web applications, and iconic brands that leave competition in the dust.
-        </motion.p>
+            {/* Line 3: Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
+              className="text-6xl sm:text-7xl md:text-8xl lg:text-[115px] xl:text-[130px] drop-shadow-[0_0_40px_rgba(250,204,21,0.25)]"
+            >
+              Experience
+            </motion.div>
+          </div>
 
-        {/* Confident Minimal CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-        >
-          <a
-            href="#contact"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-yellow-400 hover:bg-yellow-300 text-black font-extrabold text-base tracking-tight shadow-[0_0_40px_rgba(250,204,21,0.35)] transition-all duration-300 hover:scale-105 active:scale-95 group"
+          {/* Subtext description in yellow typography matching Figma */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-8 md:mt-10 space-y-1 text-[#FACC15]/85 text-sm md:text-base lg:text-lg font-normal max-w-xl leading-relaxed"
           >
-            <span>Start a Project</span>
-            <ArrowUpRight className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </a>
+            <p>
+              Founded by young professionals with industry track records, we craft high-impact digital experiences.
+            </p>
+            <p>
+              Engineering websites, products, and brands that leave competition in the dust.
+            </p>
+          </motion.div>
 
-          <a
-            href="#services"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-white border border-white/15 hover:border-white/30 font-semibold text-base tracking-tight backdrop-blur-md transition-all duration-300 group"
+          {/* Minimalist Action Controls */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.0, ease: [0.16, 1, 0.3, 1] }}
+            className="mt-10 md:mt-12 flex flex-wrap items-center gap-4"
           >
-            <span>Discover the Current</span>
-            <ArrowDown className="w-4 h-4 text-zinc-400 group-hover:text-yellow-400 group-hover:translate-y-1 transition-all" />
-          </a>
-        </motion.div>
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#FACC15] hover:bg-yellow-300 text-black font-extrabold text-sm tracking-tight shadow-[0_0_35px_rgba(250,204,21,0.35)] transition-all duration-300 hover:scale-105 active:scale-95 group"
+            >
+              <span>Start a Project</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+
+            <a
+              href="#services"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-black/40 hover:bg-black/60 text-[#FACC15] border border-[#FACC15]/30 hover:border-[#FACC15] font-bold text-sm tracking-tight backdrop-blur-md transition-all duration-300 group"
+            >
+              <span>Explore Capabilities</span>
+              <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
+            </a>
+          </motion.div>
+        </div>
       </div>
-
-      {/* Fluid Bottom Transition Fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-yellow-400 via-transparent to-transparent pointer-events-none opacity-0" />
     </section>
   );
 }
